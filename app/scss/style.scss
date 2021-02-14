@@ -4,4 +4,121 @@
 @import 'global';
 
 
-@import 'media';
+
+
+
+.header{
+  padding: 50px 0 50px;
+}
+
+
+.header-top{
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  &__menu-list{
+    display: flex;
+  }
+  &__menu-item + .header-top__menu-item{
+    margin-left: 30px;
+  }
+  &__menu-link{
+    @extend %rubik-500;
+    color: $menu;
+    font-size: 15px;
+    line-height: 12px;
+  }
+
+  .logo{
+  position: absolute;
+  left: 0;
+  &::before{
+    content: "Glee.";
+    @extend %rubik-500;
+    font-size: 36px;
+    line-height: 58px;
+    color: $menu;
+    position: absolute;
+    top: -8px;
+    left: 60px;
+  }
+}
+
+.user-nav{
+  display: flex;
+  position: absolute;
+  right: 0;
+  &__search{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+  &__search-img{
+    top: 17px;
+    left: 17px;
+    position: absolute;
+  }
+  &__goods{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 170px;
+    background-color: #fcd7b6;
+    border-radius: 25px;
+    position: relative;
+  }
+  &__favorite{
+    border-right: 1px solid #fde7d3;
+    padding: 10px 40px 10px 30px;
+  }
+  &__favorite-num{
+    @extend %dmsans-500;
+    font-size: 10px;
+    line-height: 17px;
+    color: #243f4d;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    left: 40px;
+    cursor: pointer;
+  }
+  &__cart-num{
+    @extend %dmsans-500;
+    font-size: 10px;
+    line-height: 17px;
+    color: #243f4d;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+  }
+  &__cart{
+    padding: 10px 30px 10px 30px;
+  }
+  &__menu{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+    margin-left: 20px;
+  }
+  &__menu-img{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+}
